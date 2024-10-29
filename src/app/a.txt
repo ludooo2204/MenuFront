@@ -1,0 +1,25 @@
+      <Grid container spacing={2} style={{ padding: '16px' }}>
+                    {/* Colonne gauche */}
+                    <Grid  size={5}>
+                    <Typography variant="h5" gutterBottom>
+                        Plats du Jour 0
+                    </Typography>
+                    {plats.filter(e=>e.momentRepasRetenu=MomentRepas.midi).map((plat, index) => (
+                        <Paper key={index} elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
+{plat.name}
+                        </Paper>
+                    ))}
+                    </Grid>
+                    {/* Colonne droite */}
+                    <Grid size={5}>
+                    <Typography variant="h5" gutterBottom>
+                        Plats du Jour 1
+                    </Typography>
+                    {plats.filter(e=>e.momentRepasRetenu=MomentRepas.soir).map((plat, index) => (
+                        <Paper key={index} elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
+{plat.name}
+                        </Paper>
+                    ))}
+                    </Grid>
+                </Grid>
+            ))
