@@ -1322,6 +1322,10 @@ describe("DashboardPage", () => {
     let result = DomainServices.getPlatCompatible(2, platsDansMenu);
     expect(result.length != 25).toBeTruthy();
   });
+  test("Page4", () => {
+    let result = DomainServices.getPlatCompatible(2, platsDansMenu);
+    expect(result.length != 25).toBeTruthy();
+  });
 
 
 });
